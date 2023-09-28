@@ -1,40 +1,52 @@
 package com.cdz.mngmtrisk.cosmoevolution.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_knight")
 public class Knight {
 
-    // Attributes
+    // attributes
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true)
     private String name;
     private int star;
-    private int armor;
+    private int cloth;
     private int constelation;
     private String imgUrl;
+    private EnumKnightClasse classe;
+    private EnumKnightElement element;
 
-    // Constructor
+    @ManyToOne
+    @JoinColumn(name = "account_id")
+    private Account account;
+
+    // constructor
     public Knight() {
     }
 
-    public Knight(Long id, String name, int star, int armor, int constelation, String imgUrl) {
+    public Knight(Long id, String name, int star, int cloth, int constelation, String imgUrl, EnumKnightClasse classe,
+            EnumKnightElement element) {
         this.id = id;
         this.name = name;
         this.star = star;
-        this.armor = armor;
+        this.cloth = cloth;
         this.constelation = constelation;
         this.imgUrl = imgUrl;
+        this.classe = classe;
+        this.element = element;
     }
 
-    // Getters and Setters
-
+    // getters and setters
     public Long getId() {
         return id;
     }
@@ -59,12 +71,12 @@ public class Knight {
         this.star = star;
     }
 
-    public int getArmor() {
-        return armor;
+    public int getCloth() {
+        return cloth;
     }
 
-    public void setArmor(int armor) {
-        this.armor = armor;
+    public void setCloth(int cloth) {
+        this.cloth = cloth;
     }
 
     public int getConstelation() {
@@ -81,6 +93,22 @@ public class Knight {
 
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
+    }
+
+    public EnumKnightClasse getClasse() {
+        return classe;
+    }
+
+    public void setClasse(EnumKnightClasse classe) {
+        this.classe = classe;
+    }
+
+    public EnumKnightElement getElement() {
+        return element;
+    }
+
+    public void setElement(EnumKnightElement element) {
+        this.element = element;
     }
 
 }

@@ -1,0 +1,1 @@
+INSERT INTO tb_account (login, pass, status, nick, level) VALUES ('Gêminí', 159753, 1, 'Kuekuatsheu', 255);

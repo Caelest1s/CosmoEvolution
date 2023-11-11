@@ -1,40 +1,30 @@
-package com.cdz.mngmtrisk.cosmoevolution.entity;
+package com.cdz.mngmtrisk.cosmoevolution.dto;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import com.cdz.mngmtrisk.cosmoevolution.entity.Knight;
 
-@Entity
-@Table(name = "tb_knight")
-public class Knight {
+import jakarta.validation.constraints.NotBlank;
 
-    // attributes
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class KnightDTO {
+
+    // attribute
     private Long id;
-    @Column(unique = true)
-    private String name;
+    private String name;    // setado
+    @NotBlank(message = "campo requerido")
     private int star;
+    @NotBlank(message = "campo requerido")
     private int cloth;
+    @NotBlank(message = "campo requerido")
     private int constelation;
-    private String imgUrl;
-    private String classe;
+    private String imgUrl;  // setado
+    private String classe;  // setado
     private String element;
 
-    @ManyToOne
-    @JoinColumn(name = "account_id")
-    private Account account;
-
     // constructor
-    public Knight() {
+    public KnightDTO() {
+
     }
 
-    public Knight(Long id, String name, int star, int cloth, int constelation, String imgUrl, String classe,
+    public KnightDTO(Long id, String name, int star, int cloth, int constelation, String imgUrl, String classe,
             String element) {
         this.id = id;
         this.name = name;
@@ -44,6 +34,18 @@ public class Knight {
         this.imgUrl = imgUrl;
         this.classe = classe;
         this.element = element;
+    }
+
+    // override constructor
+    public KnightDTO(Knight knight) {
+        id = knight.getId();
+        name = knight.getName();
+        star = knight.getStar();
+        cloth = knight.getCloth();
+        constelation = knight.getConstelation();
+        imgUrl = knight.getImgUrl();
+        classe = knight.getClasse();
+        element = knight.getElement();
     }
 
     // getter and setter

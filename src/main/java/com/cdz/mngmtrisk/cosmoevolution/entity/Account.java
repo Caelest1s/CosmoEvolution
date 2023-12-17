@@ -2,8 +2,6 @@ package com.cdz.mngmtrisk.cosmoevolution.entity;
 
 import java.util.List;
 
-import com.cdz.mngmtrisk.cosmoevolution.enums.EnumAccountStatus;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,7 +21,7 @@ public class Account {
     @Column(unique = true)
     private String login;
     private String pass;
-    private EnumAccountStatus status;
+    private String status;
     @Column(unique = true)
     private String nick;
     private int level;
@@ -38,7 +36,7 @@ public class Account {
 
     }
 
-    public Account(Long id, String login, String pass, EnumAccountStatus status, String nick, int level) {
+    public Account(Long id, String login, String pass, String status, String nick, int level) {
         this.id = id;
         this.login = login;
         this.pass = pass;
@@ -72,11 +70,11 @@ public class Account {
         this.pass = pass;
     }
 
-    public EnumAccountStatus getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(EnumAccountStatus status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

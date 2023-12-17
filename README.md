@@ -2,40 +2,39 @@
 
 # Sobre o projeto
 
-Cosmo Evolution é um projeto voltado para administração de recursos e gerenciamento de contas dentro do Knights of the Zodiac, tendo como uma de suas principais características demonstrar os pontos fortes e os potenciais de cada player em sua singularidade, pontos positivos. Assim, como, explorar a fragilidade e a dificuldade de cada account tido como pontos negativos. O Cosmo Evolution(CEVO) tem como essência manter essa relação entre os players de mesma guilda, a fim de, trazer transparência, um diálogo direto entre os integrantes e auditorias quando necessárias com o intuito de auxiliar na tomada de decisão. BUILDING(Tendo uma visão holística...selecionar determinadas atividades para quem detém as melhores aptidões, além de acompanhar o desenvolvimento da party).
+Projeto Spring Boot + ReactJS que realiza o acompanhamento do progresso dos cavaleiros inclusive seus atributos e características. Com a finalidade de o líder da guilda ou grupo consiga monitorar toda a sua equipe em tempo real. Automatizando todo o processo e validando todo o progresso de sua equipe. Assim como outros player conseguem solicitar ajuda de um membro da guilda. O projeto tem como objetivo automatizar e visualizar de maneira ampla todos os recursos que a guilda possui, evitando um labor manual e exaustivo. Onde todos conseguem observar o percurso que a guilda está trilhando e inclusive oferenco o potencial de percorrer um outro caminho a fim de agregar como um todo para a equipe.
 
-## Modelo conceitual
+ser incisivo e depois retornar explicando. Visão Geral e depois explico as partes. ou abordo de maneira específica e volto explicando o TODO
 
-building...
+# Modelo Conceitual 
 
-## Tecnologias Utilizadas
+...in build
 
-### FrameWorks/Library
+## Desafio do projeto
 
-<img src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"/>
-<img src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot"/>
+A proposta do projeto é implementar um sistema completo com Banco de Dados,  com Front-End, ReactJS, e Back-End feito com Spring Boot... além de disponibilizar muitos muitos outros recursos como Validação, Resposta HTTP, e mais... be continue
 
-### FrontEnd
+# Tecnologias Utilizadas
+## Back-End
+- Java
+- Spring Boot
+- Spring WEB
+- Jpa / Hibernate
+- Maven
+- Banco de Dados: ******
 
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/>
+## Front-End
+- React.JS
 
-### ORM
-
-<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
+## Dependências / Bibliotecas
+- Jakarta - Bean Validation
 
 ## Repositório
-
 ```bash
-# clonar repositório
-git clone https://github.com/Caelest1s/CosmoEvolution
+#clonar repositório
+git clone https://github.com/Caelest1s/cosmoevolution
 ```
 
-## Autor
+# Autor Jefferson Nascimento de Jesus Celestino
 
-Jefferson Nascimento de Jesus Celestino
-
-## Contato
-
-<a href="https://www.linkedin.com/in/caelestis/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-<a href="https://github.com/Caelest1s" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
+<a href="https://www.linkedin.com/in/caelestis/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>

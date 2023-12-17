@@ -1,6 +1,8 @@
 package com.cdz.mngmtrisk.cosmoevolution.dto;
 
 import com.cdz.mngmtrisk.cosmoevolution.entity.Knight;
+import com.cdz.mngmtrisk.cosmoevolution.enums.EnumKnightClasse;
+import com.cdz.mngmtrisk.cosmoevolution.enums.EnumKnightElement;
 
 import jakarta.validation.constraints.NotBlank;
 
@@ -10,22 +12,22 @@ public class KnightDTO {
     private Long id;
     private String name;    // setado
     @NotBlank(message = "campo requerido")
-    private int star;
+    private String star;
     @NotBlank(message = "campo requerido")
     private int cloth;
     @NotBlank(message = "campo requerido")
     private int constelation;
     private String imgUrl;  // setado
-    private String classe;  // setado
-    private String element;
+    private EnumKnightClasse classe;  // setado
+    private EnumKnightElement element; // setado
 
     // constructor
     public KnightDTO() {
 
     }
 
-    public KnightDTO(Long id, String name, int star, int cloth, int constelation, String imgUrl, String classe,
-            String element) {
+    public KnightDTO(Long id, String name, String star, int cloth, int constelation, String imgUrl, EnumKnightClasse classe,
+            EnumKnightElement element) {
         this.id = id;
         this.name = name;
         this.star = star;
@@ -65,11 +67,11 @@ public class KnightDTO {
         this.name = name;
     }
 
-    public int getStar() {
+    public String getStar() {
         return star;
     }
 
-    public void setStar(int star) {
+    public void setStar(String star) {
         this.star = star;
     }
 
@@ -97,19 +99,19 @@ public class KnightDTO {
         this.imgUrl = imgUrl;
     }
 
-    public String getClasse() {
+    public EnumKnightClasse getClasse() {
         return classe;
     }
 
-    public void setClasse(String classe) {
+    public void setClasse(EnumKnightClasse classe) {
         this.classe = classe;
     }
 
-    public String getElement() {
+    public EnumKnightElement getElement() {
         return element;
     }
 
-    public void setElement(String element) {
+    public void setElement(EnumKnightElement element) {
         this.element = element;
     }
 

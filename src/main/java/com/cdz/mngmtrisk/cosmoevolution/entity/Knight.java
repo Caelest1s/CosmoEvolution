@@ -1,7 +1,12 @@
 package com.cdz.mngmtrisk.cosmoevolution.entity;
 
+import com.cdz.mngmtrisk.cosmoevolution.enums.EnumKnightClasse;
+import com.cdz.mngmtrisk.cosmoevolution.enums.EnumKnightElement;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -19,12 +24,15 @@ public class Knight {
     private Long id;
     @Column(unique = true)
     private String name;
-    private int star;
+    private String star;
     private int cloth;
     private int constelation;
+    @Column(unique = true, columnDefinition = "TEXT", length = 512)
     private String imgUrl;
-    private String classe;
-    private String element;
+    @Enumerated(EnumType.STRING)
+    private EnumKnightClasse classe;
+    @Enumerated(EnumType.STRING)
+    private EnumKnightElement element;
 
     @ManyToOne
     @JoinColumn(name = "account_id")
@@ -34,8 +42,8 @@ public class Knight {
     public Knight() {
     }
 
-    public Knight(Long id, String name, int star, int cloth, int constelation, String imgUrl, String classe,
-            String element) {
+    public Knight(Long id, String name, String star, int cloth, int constelation, String imgUrl, EnumKnightClasse classe,
+            EnumKnightElement element) {
         this.id = id;
         this.name = name;
         this.star = star;
@@ -63,11 +71,11 @@ public class Knight {
         this.name = name;
     }
 
-    public int getStar() {
+    public String getStar() {
         return star;
     }
 
-    public void setStar(int star) {
+    public void setStar(String star) {
         this.star = star;
     }
 
@@ -95,20 +103,19 @@ public class Knight {
         this.imgUrl = imgUrl;
     }
 
-    public String getClasse() {
+    public EnumKnightClasse getClasse() {
         return classe;
     }
 
-    public void setClasse(String classe) {
+    public void setClasse(EnumKnightClasse classe) {
         this.classe = classe;
     }
 
-    public String getElement() {
+    public EnumKnightElement getElement() {
         return element;
     }
 
-    public void setElement(String element) {
+    public void setElement(EnumKnightElement element) {
         this.element = element;
     }
-
 }

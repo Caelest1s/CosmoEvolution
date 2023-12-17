@@ -20,7 +20,7 @@ public class Card {
     private Long id;
     private String name;
     private EnumCardColor color;
-    private int star;
+    private byte star;
 
     @ManyToOne
     @JoinColumn(name = "account_id")
@@ -30,7 +30,7 @@ public class Card {
     public Card() {
     }
 
-    public Card(Long id, String name, EnumCardColor color, int star) {
+    public Card(Long id, String name, EnumCardColor color, byte star) {
         this.id = id;
         this.name = name;
         this.color = color;
@@ -62,11 +62,11 @@ public class Card {
         this.color = color;
     }
 
-    public int getStar() {
+    public byte getStar() {
         return star;
     }
 
-    public void setStar(int star) {
+    public void setStar(byte star) {
         this.star = star;
     }
 
